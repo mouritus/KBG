@@ -1633,3 +1633,25 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.03.07-03.39.42:014][228]LogXGEController: Cleaning working directory: C:/Users/Tata/AppData/Local/Temp/UnrealXGEWorkingDir/
 [2024.03.07-03.39.42:015][228]LogModuleManager: Shutting down and abandoning module FastBuildController (42)
 [2024.03.07-03.39.42:763][228]LogModuleManager: Shutting down and abandoning module AnimationModifiers (40)
+[2024.03.07-03.39.42:924][228]LogModuleManager: Shutting down and abandoning module AudioEditor (38)
+[2024.03.07-03.39.43:004][228]LogModuleManager: Shutting down and abandoning module PropertyEditor (37)
+[2024.03.07-03.39.43:016][228]LogModuleManager: Shutting down and abandoning module Virtualization (34)
+[2024.03.07-03.39.43:025][228]LogModuleManager: Shutting down and abandoning module MessageLog (33)
+[2024.03.07-03.39.43:034][228]LogModuleManager: Shutting down and abandoning module TextureCompressor (30)
+[2024.03.07-03.39.43:048][228]LogModuleManager: Shutting down and abandoning module RenderCore (28)
+[2024.03.07-03.39.43:048][228]LogModuleManager: Shutting down and abandoning module Landscape (26)
+[2024.03.07-03.39.43:048][228]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (24)
+[2024.03.07-03.39.43:107][228]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (22)
+[2024.03.07-03.39.43:143][228]LogModuleManager: Shutting down and abandoning module Renderer (20)
+[2024.03.07-03.39.43:241][228]LogModuleManager: Shutting down and abandoning module Engine (18)
+[2024.03.07-03.39.43:301][228]LogModuleManager: Shutting down and abandoning module CoreUObject (16)
+[2024.03.07-03.39.43:301][228]LogModuleManager: Shutting down and abandoning module SandboxFile (14)
+[2024.03.07-03.39.43:305][228]LogModuleManager: Shutting down and abandoning module PakFile (12)
+[2024.03.07-03.39.43:305][228]LogModuleManager: Shutting down and abandoning module RSA (11)
+[2024.03.07-03.39.43:305][228]LogModuleManager: Shutting down and abandoning module NetworkFile (8)
+[2024.03.07-03.39.43:343][228]LogModuleManager: Shutting down and abandoning module StreamingFile (6)
+[2024.03.07-03.39.43:343][228]LogModuleManager: Shutting down and abandoning module CookOnTheFly (4)
+[2024.03.07-03.39.43:374][228]LogModuleManager: Shutting down and abandoning module StorageServerClient (2)
+[2024.03.07-03.39.43:645][228]LogD3D12RHI: ~FD3D12DynamicRHI
+[2024.03.07-03.39.43:699][228]LogExit: Exiting.
+[2024.03.07-03.39.45:358][228]Log file closed, 03/07/24 10:39:45
