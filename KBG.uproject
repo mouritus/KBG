@@ -1,8 +1,18 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{6633C632-4A68-E31C-2277-5E9E6C7A4867}",
+	"EngineAssociation": "{8C4BCB74-42F7-924C-984C-F8A3C824FC0A}",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "KBG",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "ModelingToolsEditorMode",

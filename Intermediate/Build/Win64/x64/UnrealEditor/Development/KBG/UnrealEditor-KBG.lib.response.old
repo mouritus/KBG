@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-KBG.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"J:\Unreal Projects\Git\KBG\Intermediate\Build\Win64\x64\KBGEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h.obj"
+"J:\Unreal Projects\Git\KBG\Intermediate\Build\Win64\x64\UnrealEditor\Development\KBG\KBG.cpp.obj"
+"J:\Unreal Projects\Git\KBG\Intermediate\Build\Win64\x64\UnrealEditor\Development\KBG\Test.cpp.obj"
+"J:\Unreal Projects\Git\KBG\Intermediate\Build\Win64\x64\UnrealEditor\Development\KBG\AI_Simulator.cpp.obj"
+"J:\Unreal Projects\Git\KBG\Intermediate\Build\Win64\x64\UnrealEditor\Development\KBG\Default.rc2.res"
+/OUT:"J:\Unreal Projects\Git\KBG\Intermediate\Build\Win64\x64\UnrealEditor\Development\KBG\UnrealEditor-KBG.lib"

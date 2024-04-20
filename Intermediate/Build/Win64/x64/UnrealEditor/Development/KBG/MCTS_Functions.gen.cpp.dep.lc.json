@@ -1,0 +1,15 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "j:\\unreal projects\\git\\kbg\\intermediate\\build\\win64\\unrealeditor\\inc\\kbg\\uht\\mcts_functions.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "j:\\unreal projects\\git\\kbg\\intermediate\\build\\win64\\x64\\kbgeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_0.h.pch",
+        "Includes": [
+            "j:\\unreal projects\\git\\kbg\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\kbg\\definitions.kbg.h",
+            "j:\\unreal projects\\git\\kbg\\source\\kbg\\public\\mcts_functions.h",
+            "j:\\unreal projects\\git\\kbg\\intermediate\\build\\win64\\unrealeditor\\inc\\kbg\\uht\\mcts_functions.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
