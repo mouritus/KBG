@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "KBG",
-			"Path": "J:\\Unreal Projects\\Git\\KBG\\Source\\KBG.Target.cs",
+			"Path": "G:\\Unreal Projects\\KBG\\Source\\KBG.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "KBGEditor",
-			"Path": "J:\\Unreal Projects\\Git\\KBG\\Source\\KBGEditor.Target.cs",
+			"Path": "G:\\Unreal Projects\\KBG\\Source\\KBGEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

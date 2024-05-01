@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <None Include="..\..\KBG.uproject" />
     <Filter Include="Source">
@@ -11,11 +11,14 @@
     <None Include="..\..\Source\KBGEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
-    <None Include="..\..\KBG.rar" />
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\KBG.rar" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultEngine.ini">
       <Filter>Config</Filter>
     </None>
@@ -23,9 +26,6 @@
       <Filter>Config</Filter>
     </None>
     <None Include="..\..\Config\DefaultInput.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
     </None>
     <Filter Include="Platforms">
@@ -43,32 +43,26 @@
     <Filter Include="Source\KBG">
       <UniqueIdentifier>{E1DCBA33-FE90-3E37-ADD9-3A270DD73AB0}</UniqueIdentifier>
     </Filter>
-    <None Include="..\..\Source\KBG\KBG.Build.cs">
-      <Filter>Source\KBG</Filter>
-    </None>
-    <ClInclude Include="..\..\Source\KBG\KBG.h">
-      <Filter>Source\KBG</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\KBG\KBG.cpp">
-      <Filter>Source\KBG</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\KBG\Test.h">
-      <Filter>Source\KBG</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\KBG\Test.cpp">
+    <ClCompile Include="..\..\Source\KBG\AI_Simulator.cpp">
       <Filter>Source\KBG</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\KBG\AI_Simulator.h">
       <Filter>Source\KBG</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\KBG\AI_Simulator.cpp">
+    <None Include="..\..\Source\KBG\KBG.Build.cs">
+      <Filter>Source\KBG</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\KBG\KBG.cpp">
       <Filter>Source\KBG</Filter>
     </ClCompile>
-    <Filter Include="Source\KBG\Public">
-      <UniqueIdentifier>{6E8EE619-FB6C-39D2-A042-D3B963733EE2}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\KBG\Public\MCTS_Functions.h">
-      <Filter>Source\KBG\Public</Filter>
+    <ClInclude Include="..\..\Source\KBG\KBG.h">
+      <Filter>Source\KBG</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\KBG\Test.cpp">
+      <Filter>Source\KBG</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\KBG\Test.h">
+      <Filter>Source\KBG</Filter>
     </ClInclude>
     <Filter Include="Source\KBG\Private">
       <UniqueIdentifier>{32531306-C770-3432-B5D6-4FC99D1E8E71}</UniqueIdentifier>
@@ -76,5 +70,11 @@
     <ClCompile Include="..\..\Source\KBG\Private\MCTS_Functions.cpp">
       <Filter>Source\KBG\Private</Filter>
     </ClCompile>
+    <Filter Include="Source\KBG\Public">
+      <UniqueIdentifier>{6E8EE619-FB6C-39D2-A042-D3B963733EE2}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\KBG\Public\MCTS_Functions.h">
+      <Filter>Source\KBG\Public</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
