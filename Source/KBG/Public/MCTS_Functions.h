@@ -16,5 +16,5 @@ class KBG_API UMCTS_Functions : public UBlueprintFunctionLibrary
 		// Every variables or function needs a tag above it for it to be used in UE5
 		// does this need to be static?
 		UFUNCTION(BlueprintCallable, Category = "MCTS")
-			static void SimulateAI(FString name, FString& output);
+			static void SimulateAI(TArray<FString> entityPos, int32 entity, TArray<bool> turnOrder, float hp, int32& actionTaken);
 };
