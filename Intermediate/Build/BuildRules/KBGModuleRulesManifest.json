@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"J:\\Unreal Projects\\Git\\KBG\\Source\\KBG\\KBG.Build.cs",
-		"J:\\Unreal Projects\\Git\\KBG\\Source\\KBG.Target.cs",
-		"J:\\Unreal Projects\\Git\\KBG\\Source\\KBGEditor.Target.cs"
+		"G:\\Unreal Projects\\KBG\\Source\\KBG\\KBG.Build.cs",
+		"G:\\Unreal Projects\\KBG\\Source\\KBG.Target.cs",
+		"G:\\Unreal Projects\\KBG\\Source\\KBGEditor.Target.cs"
 	],
 	"EngineVersion": "5.2.1"
 }
