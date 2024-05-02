@@ -67,19 +67,19 @@
     <Filter Include="Source\KBG\Public">
       <UniqueIdentifier>{6E8EE619-FB6C-39D2-A042-D3B963733EE2}</UniqueIdentifier>
     </Filter>
-    <ClInclude Include="..\..\Source\KBG\Public\MCTS_Functions.h">
+    <ClInclude Include="..\..\Source\KBG\Public\MyBlueprintFunctionLibrary.h">
       <Filter>Source\KBG\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\KBG\Public\MyBlueprintFunctionLibrary.h">
+    <ClInclude Include="..\..\Source\KBG\Public\MCTS_Functions.h">
       <Filter>Source\KBG\Public</Filter>
     </ClInclude>
     <Filter Include="Source\KBG\Private">
       <UniqueIdentifier>{32531306-C770-3432-B5D6-4FC99D1E8E71}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\KBG\Private\MCTS_Functions.cpp">
+    <ClCompile Include="..\..\Source\KBG\Private\MyBlueprintFunctionLibrary.cpp">
       <Filter>Source\KBG\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\KBG\Private\MyBlueprintFunctionLibrary.cpp">
+    <ClCompile Include="..\..\Source\KBG\Private\MCTS_Functions.cpp">
       <Filter>Source\KBG\Private</Filter>
     </ClCompile>
   </ItemGroup>
