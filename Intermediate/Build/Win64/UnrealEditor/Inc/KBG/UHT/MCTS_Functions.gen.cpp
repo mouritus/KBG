@@ -16,14 +16,16 @@ void EmptyLinkFunctionForGeneratedCodeMCTS_Functions() {}
 // End Cross Module References
 	DEFINE_FUNCTION(UMCTS_Functions::execSimulateAI)
 	{
-		P_GET_TARRAY(FString,Z_Param_entityPos);
-		P_GET_PROPERTY(FIntProperty,Z_Param_entity);
-		P_GET_TARRAY(bool,Z_Param_turnOrder);
-		P_GET_PROPERTY(FFloatProperty,Z_Param_hp);
+		P_GET_TARRAY(int32,Z_Param_input_NPCs);
+		P_GET_TARRAY(int32,Z_Param_input_NPC_Team);
+		P_GET_TARRAY(int32,Z_Param_input_pos_X);
+		P_GET_TARRAY(int32,Z_Param_input_pos_Y);
+		P_GET_TARRAY(int32,Z_Param_input_attackRange_X);
+		P_GET_TARRAY(int32,Z_Param_input_attackRange_Y);
 		P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_actionTaken);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		UMCTS_Functions::SimulateAI(Z_Param_entityPos,Z_Param_entity,Z_Param_turnOrder,Z_Param_hp,Z_Param_Out_actionTaken);
+		UMCTS_Functions::SimulateAI(Z_Param_input_NPCs,Z_Param_input_NPC_Team,Z_Param_input_pos_X,Z_Param_input_pos_Y,Z_Param_input_attackRange_X,Z_Param_input_attackRange_Y,Z_Param_Out_actionTaken);
 		P_NATIVE_END;
 	}
 	void UMCTS_Functions::StaticRegisterNativesUMCTS_Functions()
@@ -38,18 +40,26 @@ void EmptyLinkFunctionForGeneratedCodeMCTS_Functions() {}
 	{
 		struct MCTS_Functions_eventSimulateAI_Parms
 		{
-			TArray<FString> entityPos;
-			int32 entity;
-			TArray<bool> turnOrder;
-			float hp;
+			TArray<int32> input_NPCs;
+			TArray<int32> input_NPC_Team;
+			TArray<int32> input_pos_X;
+			TArray<int32> input_pos_Y;
+			TArray<int32> input_attackRange_X;
+			TArray<int32> input_attackRange_Y;
 			int32 actionTaken;
 		};
-		static const UECodeGen_Private::FStrPropertyParams NewProp_entityPos_Inner;
-		static const UECodeGen_Private::FArrayPropertyParams NewProp_entityPos;
-		static const UECodeGen_Private::FIntPropertyParams NewProp_entity;
-		static const UECodeGen_Private::FBoolPropertyParams NewProp_turnOrder_Inner;
-		static const UECodeGen_Private::FArrayPropertyParams NewProp_turnOrder;
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_hp;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_input_NPCs_Inner;
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_input_NPCs;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_input_NPC_Team_Inner;
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_input_NPC_Team;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_input_pos_X_Inner;
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_input_pos_X;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_input_pos_Y_Inner;
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_input_pos_Y;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_input_attackRange_X_Inner;
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_input_attackRange_X;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_input_attackRange_Y_Inner;
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_input_attackRange_Y;
 		static const UECodeGen_Private::FIntPropertyParams NewProp_actionTaken;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
@@ -57,28 +67,40 @@ void EmptyLinkFunctionForGeneratedCodeMCTS_Functions() {}
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_entityPos_Inner = { "entityPos", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_entityPos = { "entityPos", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MCTS_Functions_eventSimulateAI_Parms, entityPos), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_entity = { "entity", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MCTS_Functions_eventSimulateAI_Parms, entity), METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_turnOrder_Inner = { "turnOrder", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), 0, nullptr, METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_turnOrder = { "turnOrder", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MCTS_Functions_eventSimulateAI_Parms, turnOrder), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_hp = { "hp", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MCTS_Functions_eventSimulateAI_Parms, hp), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_NPCs_Inner = { "input_NPCs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_NPCs = { "input_NPCs", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MCTS_Functions_eventSimulateAI_Parms, input_NPCs), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_NPC_Team_Inner = { "input_NPC_Team", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_NPC_Team = { "input_NPC_Team", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MCTS_Functions_eventSimulateAI_Parms, input_NPC_Team), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_pos_X_Inner = { "input_pos_X", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_pos_X = { "input_pos_X", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MCTS_Functions_eventSimulateAI_Parms, input_pos_X), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_pos_Y_Inner = { "input_pos_Y", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_pos_Y = { "input_pos_Y", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MCTS_Functions_eventSimulateAI_Parms, input_pos_Y), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_attackRange_X_Inner = { "input_attackRange_X", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_attackRange_X = { "input_attackRange_X", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MCTS_Functions_eventSimulateAI_Parms, input_attackRange_X), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_attackRange_Y_Inner = { "input_attackRange_Y", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_attackRange_Y = { "input_attackRange_Y", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MCTS_Functions_eventSimulateAI_Parms, input_attackRange_Y), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_actionTaken = { "actionTaken", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(MCTS_Functions_eventSimulateAI_Parms, actionTaken), METADATA_PARAMS(nullptr, 0) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_entityPos_Inner,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_entityPos,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_entity,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_turnOrder_Inner,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_turnOrder,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_hp,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_NPCs_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_NPCs,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_NPC_Team_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_NPC_Team,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_pos_X_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_pos_X,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_pos_Y_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_pos_Y,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_attackRange_X_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_attackRange_X,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_attackRange_Y_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_input_attackRange_Y,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::NewProp_actionTaken,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::Function_MetaDataParams[] = {
 		{ "Category", "MCTS" },
-		{ "Comment", "// Every variables or function needs a tag above it for it to be used in UE5\n// does this need to be static?\n" },
+		{ "Comment", "// Every variables or function needs a tag above it for it to be used in UE5\n// does this need to be static?\n//1. Nama character = characters | Tipe String\n//2. Tim Char(Ally / Musuh) = characterTeam | Tipe String\n//3. Pos_x(Pos x di board) = pos_X | Tipe int\n//4. Pos_y(Pos Y di board) = pos_Y | Tipe int \n//5. Attack range tiap character = attackRange_X | Tipe int\n//6. Attack range tiap character = attackRange_Y | Tipe int\n" },
 		{ "ModuleRelativePath", "Public/MCTS_Functions.h" },
-		{ "ToolTip", "Every variables or function needs a tag above it for it to be used in UE5\ndoes this need to be static?" },
+		{ "ToolTip", "Every variables or function needs a tag above it for it to be used in UE5\ndoes this need to be static?\n1. Nama character = characters | Tipe String\n2. Tim Char(Ally / Musuh) = characterTeam | Tipe String\n3. Pos_x(Pos x di board) = pos_X | Tipe int\n4. Pos_y(Pos Y di board) = pos_Y | Tipe int\n5. Attack range tiap character = attackRange_X | Tipe int\n6. Attack range tiap character = attackRange_Y | Tipe int" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMCTS_Functions, nullptr, "SimulateAI", nullptr, nullptr, sizeof(Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::MCTS_Functions_eventSimulateAI_Parms), Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04442401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMCTS_Functions_SimulateAI_Statics::Function_MetaDataParams)) };
@@ -111,7 +133,7 @@ void EmptyLinkFunctionForGeneratedCodeMCTS_Functions() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_KBG,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMCTS_Functions_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMCTS_Functions_SimulateAI, "SimulateAI" }, // 279493742
+		{ &Z_Construct_UFunction_UMCTS_Functions_SimulateAI, "SimulateAI" }, // 534154806
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMCTS_Functions_Statics::Class_MetaDataParams[] = {
@@ -158,9 +180,9 @@ void EmptyLinkFunctionForGeneratedCodeMCTS_Functions() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Git_KBG_Source_KBG_Public_MCTS_Functions_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UMCTS_Functions, UMCTS_Functions::StaticClass, TEXT("UMCTS_Functions"), &Z_Registration_Info_UClass_UMCTS_Functions, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMCTS_Functions), 4109757766U) },
+		{ Z_Construct_UClass_UMCTS_Functions, UMCTS_Functions::StaticClass, TEXT("UMCTS_Functions"), &Z_Registration_Info_UClass_UMCTS_Functions, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMCTS_Functions), 2493295119U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Git_KBG_Source_KBG_Public_MCTS_Functions_h_4263898179(TEXT("/Script/KBG"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Git_KBG_Source_KBG_Public_MCTS_Functions_h_583637998(TEXT("/Script/KBG"),
 		Z_CompiledInDeferFile_FID_Unreal_Projects_Git_KBG_Source_KBG_Public_MCTS_Functions_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_Git_KBG_Source_KBG_Public_MCTS_Functions_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -174,10 +174,10 @@
     <None Include="..\..\Source\KBGEditor.Target.cs"/>
     <None Include="..\..\KBG.rar"/>
     <None Include="..\..\.vsconfig"/>
-    <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
+    <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Platforms\HoloLens\Config\HoloLensEngine.ini"/>
     <None Include="..\..\Source\KBG\KBG.Build.cs"/>
     <ClInclude Include="..\..\Source\KBG\KBG.h"/>
